@@ -1,22 +1,54 @@
-.bar {
-  display: flex;
-justify-content: space-between;
-  color: rgb(229, 229, 229);
-  width: 300px;
-  background-color: rgb(20, 20, 20);
-  padding: 5px;
-  border-radius: 50px;
-}
+$grey: rgb(40, 40, 40);
+$white: rgb(229, 229, 229);
+$dark: rgb(20, 20, 20);
 
-.iconWrapper {
+@mixin generalIcon {
   padding: 15px;
   border-radius: 50px;
   align-content: center;
   cursor: pointer;
-  
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  background-color: $dark;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.searchBarWrapper {
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
   &:hover {
-    background-color: rgb(40, 40, 40);
+    background-color: $grey;
   }
+}
+
+.searchBar {
+  background-color: $dark;
+  border-radius: 0px 50px 50px 0px;
+  font-size: 20px;
+  border: none;
+  color: $white;
+  width: 238px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.iconWrapper {
+  @include generalIcon();
+  &:hover {
+    background-color: $grey;
+  }
+}
+
+.searchIconWrapper {
+  @include generalIcon();
 }
 
 .icons {
