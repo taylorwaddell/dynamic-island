@@ -7,6 +7,7 @@ $dark: rgb(20, 20, 20);
   border-radius: 50px;
   align-content: center;
   cursor: pointer;
+  float: left;
 }
 
 .bar {
@@ -34,6 +35,7 @@ $dark: rgb(20, 20, 20);
   border: none;
   color: $white;
   width: 238px;
+  float: left;
 
   &:focus {
     outline: none;
@@ -49,6 +51,20 @@ $dark: rgb(20, 20, 20);
 
 .searchIconWrapper {
   @include generalIcon();
+}
+
+.gray {
+  background-color: $grey;
+}
+
+.borderRadiusAdjustment {
+  border-radius: 50px 0px 0px 50px;
+}
+
+.grayHover {
+  &:hover {
+    background-color: $grey;
+  }
 }
 
 .icons {
